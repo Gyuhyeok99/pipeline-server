@@ -33,7 +33,7 @@ app.get("/api/text", (req, res) => {
 
 app.post("/api/text", (req, res) => {
     const { text, username } = req.body;
-    const finalText = `${text} ...아마도...`;
+    const finalText = `${text} !!!아마도!!!`;
     connection.query(
         "INSERT INTO texts SET ?",
         { text: finalText, username },
@@ -44,6 +44,6 @@ app.post("/api/text", (req, res) => {
     );
 });
 
-app.listen(8080, () => {
-    console.log("Server listening on port 8080");
+app.listen(8000, () => {
+    console.log("Server listening on port 8000");
 });
